@@ -4,12 +4,16 @@
   padding: 0;
 }
 
+span, button, a {
+  cursor: pointer;
+}
+
 button {
-  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  cursor: pointer;
 }
 
 a {
-  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
@@ -18,7 +22,98 @@ p {
   font-size: 16px;
 }
 
+.user-img,
+.chess-img {
+  width: 45px;
+  height: 45px;
+}
+@media (max-width: 375px) {
+  .user-img,
+.chess-img {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+.chess-img {
+  position: absolute;
+  right: 0;
+}
+
+.post {
+  display: flex;
+  position: relative;
+  min-height: 80px;
+}
+
+.post-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-main {
+  background: #F7FAFD;
+  border-radius: 8px;
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background: #F7FAFD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  width: 730px;
+  height: 839px;
+  background: #fff;
+  box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
+  border-radius: 15px;
+  padding: 33px 30px 0 32px;
+}
+@media (max-width: 375px) {
+  .card-container {
+    width: 100%;
+    height: 100%;
+    padding: 24px 16px 29px 16px;
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.card-header__notifications-container {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.card-header__title-text {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+  color: #1C202B;
+}
+.card-header__title-number {
+  font-weight: 800;
+  line-height: 20px;
+  color: #fff;
+  background: #0A327B;
+  border-radius: 6px;
+  width: 32px;
+  height: 25px;
+  text-align: center;
+  padding-top: 2px;
+}
+.card-header__mark {
+  background: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5E6778;
+}
+.card-header__mark:hover {
+  color: #0A327B;
 }/*# sourceMappingURL=style.css.map */

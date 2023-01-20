@@ -4,12 +4,16 @@
     padding: 0;
 }
 
+span, button, a {
+    cursor: pointer;
+}
+
 button {
-    border: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    cursor: pointer;
 }
 
 a {
-    cursor: pointer;
     text-decoration: none;
     color: inherit;
 }
@@ -19,8 +23,10 @@ p {
 }
 
 $bg-color: #F7FAFD;
+$btn-color: #5E6778;
 $primary-red:hsl(1, 90%, 64%);
-$primary-blue: hsl(219, 85%, 26%);
+$primary-blue: #0A327B;
+$notification-color: #1C202B;
 $mobile: 375px;
 $white: #fff;
 $black: #000;

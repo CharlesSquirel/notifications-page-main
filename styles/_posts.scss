@@ -1,0 +1,30 @@
+.user-img,
+.chess-img {
+  width: 45px;
+  height: 45px;
+  @media (max-width: $mobile) {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+.chess-img {
+  position: absolute;
+  right: 0;
+}
+
+.post {
+  display: flex;
+  position: relative;
+  min-height: 80px;
+}
+
+.post-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-main {
+  background: $bg-color;
+  border-radius: 8px;
+}

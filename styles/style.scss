@@ -1,6 +1,62 @@
-@import '_global.scss';
+@import "_global.scss";
+@import "_posts.scss";
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background: $bg-color;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  width: 730px;
+  height: 839px;
+  background: $white;
+  box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
+  border-radius: 15px;
+  padding: 33px 30px 0 32px;
+  @media (max-width: $mobile) {
+    width: 100%;
+    height: 100%;
+    padding: 24px 16px 29px 16px;
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  &__notifications-container {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+  &__title-text {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+    color: $notification-color;
+  }
+  &__title-number {
+    font-weight: 800;
+    line-height: 20px;
+    color: $white;
+    background: $primary-blue;
+    border-radius: 6px;
+    width: 32px;
+    height: 25px;
+    text-align: center;
+    padding-top: 2px;
+  }
+  &__mark {
+    background: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $btn-color;
+    &:hover {
+      color: $primary-blue;
+    }
+  }
 }
