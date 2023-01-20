@@ -10,7 +10,7 @@ span, button, a {
 
 button {
   font-family: "Plus Jakarta Sans", sans-serif;
-  cursor: pointer;
+  border: none;
 }
 
 a {
@@ -56,6 +56,63 @@ p {
   border-radius: 8px;
 }
 
+.post__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5E6778;
+}
+@media (max-width: 375px) {
+  .post__title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.post__title--span-name {
+  font-weight: 800;
+  color: #1C202B;
+}
+@media (max-width: 375px) {
+  .post__title--span-name {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.post__title--span-post {
+  font-weight: 800;
+}
+@media (max-width: 375px) {
+  .post__title--span-post {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.post__title a {
+  font-weight: 800;
+  color: #0A327B;
+}
+@media (max-width: 375px) {
+  .post__title a {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.post__paragraph {
+  font-weight: 500;
+  line-height: 20px;
+  color: #939cad;
+}
+@media (max-width: 375px) {
+  .post__paragraph {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background: #F7FAFD;
@@ -65,19 +122,30 @@ body {
   height: 100vh;
 }
 
+@media (max-width: 375px) {
+  main {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .card-container {
+  display: flex;
+  flex-direction: column;
   width: 730px;
   height: 839px;
   background: #fff;
   box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
   border-radius: 15px;
   padding: 33px 30px 0 32px;
+  gap: 30px;
 }
 @media (max-width: 375px) {
   .card-container {
     width: 100%;
     height: 100%;
     padding: 24px 16px 29px 16px;
+    gap: 24px;
   }
 }
 
@@ -90,11 +158,22 @@ body {
   align-items: center;
   gap: 22px;
 }
+@media (max-width: 375px) {
+  .card-header__notifications-container {
+    gap: 9px;
+  }
+}
 .card-header__title-text {
   font-weight: 800;
   font-size: 24px;
   line-height: 30px;
   color: #1C202B;
+}
+@media (max-width: 375px) {
+  .card-header__title-text {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .card-header__title-number {
   font-weight: 800;
@@ -116,4 +195,10 @@ body {
 }
 .card-header__mark:hover {
   color: #0A327B;
+}
+@media (max-width: 375px) {
+  .card-header__mark {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */

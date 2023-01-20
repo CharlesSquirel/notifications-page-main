@@ -1,3 +1,4 @@
+// IMG
 .user-img,
 .chess-img {
   width: 45px;
@@ -13,6 +14,7 @@
   right: 0;
 }
 
+// POST
 .post {
   display: flex;
   position: relative;
@@ -27,4 +29,52 @@
 .post-main {
   background: $bg-color;
   border-radius: 8px;
+}
+
+// TYPOGRAPHY
+.post__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $btn-color;
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &--span-name {
+    font-weight: 800;
+    color: $notification-color;
+    @media (max-width: $mobile) {
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &--span-post {
+    font-weight: 800;
+    @media (max-width: $mobile) {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  & a {
+    font-weight: 800;
+    color: $primary-blue;
+    @media (max-width: $mobile) {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+.post__paragraph {
+  font-weight: 500;
+  line-height: 20px;
+  color: #939cad;
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
