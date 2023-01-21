@@ -8,6 +8,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  @media (max-width: $mobile) {
+    height: 100%;
+  }
 }
 
 main {
@@ -35,13 +38,19 @@ main {
   }
 }
 
+.flex-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
 // CARD HEADER
 .card-header {
   display: flex;
   justify-content: space-between;
   &__notifications-container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 22px;
     @media (max-width: $mobile) {
       gap: 9px;

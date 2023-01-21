@@ -1,32 +1,34 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-span, button, a {
-    cursor: pointer;
+span,
+button,
+a {
+  cursor: pointer;
 }
 
 button {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-$bg-color: #F7FAFD;
-$btn-color: #5E6778;
-$primary-red:hsl(1, 90%, 64%);
-$primary-blue: #0A327B;
-$notification-color: #1C202B;
-$mobile: 375px;
+$bg-color: #f7fafd;
+$btn-color: #5e6778;
+$primary-red: #f65552;
+$primary-blue: #0a327b;
+$notification-color: #1c202b;
 $white: #fff;
 $black: #000;
+$mobile: 450px;

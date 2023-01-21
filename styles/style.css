@@ -4,7 +4,9 @@
   padding: 0;
 }
 
-span, button, a {
+span,
+button,
+a {
   cursor: pointer;
 }
 
@@ -25,31 +27,63 @@ p {
 .post {
   display: flex;
   position: relative;
+  align-items: center;
+  padding: 18px 32px 17px 20px;
+  gap: 19px;
   min-height: 80px;
+  border-radius: 8px;
+}
+@media (max-width: 450px) {
+  .post {
+    padding: 16px 26px 16px 16px;
+    gap: 13px;
+    min-height: 89px;
+    align-items: flex-start;
+  }
 }
 
 .post-text-container {
   display: flex;
   flex-direction: column;
+  gap: 4px;
+}
+@media (max-width: 450px) {
+  .post-text-container {
+    gap: 3px;
+  }
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 450px) {
+  .posts-container {
+    gap: 10px;
+  }
+}
+
+.post-private-mess {
+  align-items: flex-start;
 }
 
 .post--unread {
-  background: #F7FAFD;
-  border-radius: 8px;
+  background: #f7fafd;
 }
 
 .post-read {
   background: transparent;
-  border-radius: 0;
 }
 
 .post__text {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: #5E6778;
+  color: #5e6778;
+  position: relative;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .post__text {
     font-size: 14px;
     line-height: 18px;
@@ -57,9 +91,9 @@ p {
 }
 .post__text a {
   font-weight: 800;
-  color: #0A327B;
+  color: #0a327b;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .post__text a {
     font-weight: 700;
     font-size: 14px;
@@ -69,9 +103,9 @@ p {
 
 .post__username {
   font-weight: 800;
-  color: #1C202B;
+  color: #1c202b;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .post__username {
     font-weight: 800;
     font-size: 14px;
@@ -82,7 +116,7 @@ p {
 .post__external-post {
   font-weight: 800;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .post__external-post {
     font-weight: 700;
     font-size: 14px;
@@ -95,11 +129,46 @@ p {
   line-height: 20px;
   color: #939cad;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .post__paragraph {
     font-size: 14px;
     line-height: 18px;
   }
+}
+
+.post__message {
+  width: 100%;
+  padding: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #5e6778;
+  border: 1px solid #dde7ee;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+.post__unread-btn {
+  background: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #5e6778;
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+}
+.post__unread-btn:hover {
+  color: #0a327b;
+}
+@media (max-width: 450px) {
+  .post__unread-btn {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+
+.unread-1,
+.unread-2 {
+  display: block;
 }
 
 .user-img,
@@ -107,7 +176,7 @@ p {
   width: 45px;
   height: 45px;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .user-img,
 .chess-img {
     width: 39px;
@@ -118,18 +187,36 @@ p {
 .chess-img {
   position: absolute;
   right: 0;
+  bottom: 17px;
+}
+@media (max-width: 450px) {
+  .chess-img {
+    bottom: 14px;
+    right: 1px;
+  }
+}
+
+.circle-icon {
+  color: #f65552;
+  font-size: 12px;
+  display: none;
 }
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background: #F7FAFD;
+  background: #f7fafd;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+@media (max-width: 450px) {
+  body {
+    height: 100%;
+  }
+}
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   main {
     width: 100%;
     height: 100%;
@@ -147,7 +234,7 @@ body {
   padding: 33px 30px 0 32px;
   gap: 30px;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .card-container {
     width: 100%;
     height: 100%;
@@ -156,16 +243,22 @@ body {
   }
 }
 
+.flex-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
 .card-header {
   display: flex;
   justify-content: space-between;
 }
 .card-header__notifications-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 22px;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .card-header__notifications-container {
     gap: 9px;
   }
@@ -174,9 +267,9 @@ body {
   font-weight: 800;
   font-size: 24px;
   line-height: 30px;
-  color: #1C202B;
+  color: #1c202b;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .card-header__title-text {
     font-size: 20px;
     line-height: 25px;
@@ -186,7 +279,7 @@ body {
   font-weight: 800;
   line-height: 20px;
   color: #fff;
-  background: #0A327B;
+  background: #0a327b;
   border-radius: 6px;
   width: 32px;
   height: 25px;
@@ -198,12 +291,12 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: #5E6778;
+  color: #5e6778;
 }
 .card-header__mark:hover {
-  color: #0A327B;
+  color: #0a327b;
 }
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .card-header__mark {
     font-size: 14px;
     line-height: 18px;

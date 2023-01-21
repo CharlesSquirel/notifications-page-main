@@ -3,23 +3,48 @@
 .post {
   display: flex;
   position: relative;
+  align-items: center;
+  padding: 18px 32px 17px 20px;
+  gap: 19px;
   min-height: 80px;
+  border-radius: 8px;
+  @media (max-width: $mobile) {
+    padding: 16px 26px 16px 16px;
+    gap: 13px;
+    min-height: 89px;
+    align-items: flex-start;
+  }
 }
 
 .post-text-container {
   display: flex;
   flex-direction: column;
+  gap: 4px;
+  @media (max-width: $mobile) {
+    gap: 3px;
+  }
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @media (max-width: $mobile) {
+    gap: 10px;
+  }
+}
+
+.post-private-mess {
+  align-items: flex-start;
 }
 
 // modifiers
 .post--unread {
   background: $bg-color;
-  border-radius: 8px;
 }
 
 .post-read {
   background: transparent;
-  border-radius: 0;
 }
 
 // typography
@@ -28,6 +53,7 @@
   font-size: 16px;
   line-height: 20px;
   color: $btn-color;
+  position: relative;
   @media (max-width: $mobile) {
     font-size: 14px;
     line-height: 18px;
@@ -72,6 +98,42 @@
   }
 }
 
+.post__message {
+  width: 100%;
+  padding: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $btn-color;
+  border: 1px solid #dde7ee;
+  border-radius: 5px;
+  margin-top: 8px;
+  @media (max-width: $mobile) {
+  }
+}
+
+.post__unread-btn {
+  background: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: $btn-color;
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  &:hover {
+    color: $primary-blue;
+  }
+  @media (max-width: $mobile) {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+
+.unread-1,
+.unread-2 {
+  display: block;
+}
+
 // IMG
 .user-img,
 .chess-img {
@@ -86,4 +148,16 @@
 .chess-img {
   position: absolute;
   right: 0;
+  bottom: 17px;
+  @media (max-width: $mobile) {
+    bottom: 14px;
+    right: 1px;
+  }
+}
+
+// CIRCLE
+.circle-icon {
+  color: $primary-red;
+  font-size: 12px;
+  display: none;
 }
