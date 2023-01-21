@@ -22,24 +22,6 @@ p {
   font-size: 16px;
 }
 
-.user-img,
-.chess-img {
-  width: 45px;
-  height: 45px;
-}
-@media (max-width: 375px) {
-  .user-img,
-.chess-img {
-    width: 39px;
-    height: 39px;
-  }
-}
-
-.chess-img {
-  position: absolute;
-  right: 0;
-}
-
 .post {
   display: flex;
   position: relative;
@@ -51,50 +33,57 @@ p {
   flex-direction: column;
 }
 
-.post-main {
+.post--unread {
   background: #F7FAFD;
   border-radius: 8px;
 }
 
-.post__title {
+.post-read {
+  background: transparent;
+  border-radius: 0;
+}
+
+.post__text {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   color: #5E6778;
 }
 @media (max-width: 375px) {
-  .post__title {
+  .post__text {
     font-size: 14px;
     line-height: 18px;
   }
 }
-.post__title--span-name {
+.post__text a {
   font-weight: 800;
-  color: #1C202B;
+  color: #0A327B;
 }
 @media (max-width: 375px) {
-  .post__title--span-name {
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 18px;
-  }
-}
-.post__title--span-post {
-  font-weight: 800;
-}
-@media (max-width: 375px) {
-  .post__title--span-post {
+  .post__text a {
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
   }
 }
-.post__title a {
+
+.post__username {
   font-weight: 800;
-  color: #0A327B;
+  color: #1C202B;
 }
 @media (max-width: 375px) {
-  .post__title a {
+  .post__username {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.post__external-post {
+  font-weight: 800;
+}
+@media (max-width: 375px) {
+  .post__external-post {
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
@@ -111,6 +100,24 @@ p {
     font-size: 14px;
     line-height: 18px;
   }
+}
+
+.user-img,
+.chess-img {
+  width: 45px;
+  height: 45px;
+}
+@media (max-width: 375px) {
+  .user-img,
+.chess-img {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+.chess-img {
+  position: absolute;
+  right: 0;
 }
 
 body {
