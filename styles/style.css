@@ -154,7 +154,7 @@ p {
   color: #5e6778;
   position: absolute;
   right: 5px;
-  bottom: 0;
+  bottom: -8px;
 }
 .post__unread-btn:hover {
   color: #0a327b;
